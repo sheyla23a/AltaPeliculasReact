@@ -9,13 +9,13 @@ const PeliculaCard = ({ pelicula, onEliminar }) => {
             <strong>Género:</strong> {pelicula.genero}
           </p>
           <div className="text-center">
-          <button
-            type="button"
-            className="btn btn-danger"
-            onClick={() => onEliminar()}
-          >
-            Eliminar
-          </button>
+            <button
+              type="button"
+              className="btn btn-danger"
+              onClick={() => onEliminar()}
+            >
+              Eliminar
+            </button>
           </div>
         </div>
       </div>
