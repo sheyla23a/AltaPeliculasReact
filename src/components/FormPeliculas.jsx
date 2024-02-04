@@ -27,7 +27,6 @@ const FormPeliculas = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validación para asegurarse de que no se agreguen películas vacías
     if (!formData.nombre.trim() || !formData.descripcion.trim()) {
       alert("Por favor, completa todos los campos del formulario.");
       return;
@@ -38,7 +37,6 @@ const FormPeliculas = () => {
     localStorage.setItem("peliculas", JSON.stringify(nuevasPeliculas));
     setPeliculas(nuevasPeliculas);
 
-    // Alerta de película agregada correctamente
     alert("Película agregada correctamente.");
 
     setFormData({
