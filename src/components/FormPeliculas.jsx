@@ -64,9 +64,12 @@ const FormPeliculas = () => {
           <input
             type="text"
             name="nombre"
+            minLength={5}
+            maxLength={30}
             value={formData.nombre}
             onChange={handleChange}
             className="form-control"
+            required
           />
         </div>
 
@@ -74,9 +77,12 @@ const FormPeliculas = () => {
           <label className="form-label">Descripción:</label>
           <textarea
             name="descripcion"
+            minLength={10}
+            maxLength={80}
             value={formData.descripcion}
             onChange={handleChange}
             className="form-control"
+            required
           />
         </div>
 
