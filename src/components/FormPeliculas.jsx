@@ -26,6 +26,23 @@ const FormPeliculas = () => {
     e.preventDefault();
     console.log("Datos enviados:", formData);
   };
+   
+  const nuevaPelicula = { ...formData };
+  const nuevasPeliculas = [...peliculas, nuevaPelicula];
+  localStorage.setItem("peliculas", JSON.stringify(nuevasPeliculas));
+
+  setPeliculas(nuevasPeliculas);
+
+  setFormData({
+    nombre: "",
+    descripcion: "",
+    genero: "comedia",
+  });
+  
+
+
+
+  
 
   return (
     <form onSubmit={handleSubmit} className="container mt-4">
