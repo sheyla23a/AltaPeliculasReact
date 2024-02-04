@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import FormPeliculas from "./components/FormPeliculas";
 import { Container } from "react-bootstrap";
 
+
 function App() {
   return <>
   <section className="text-center mt-4">
