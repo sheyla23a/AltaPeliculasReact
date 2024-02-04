@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const FormPeliculas = () => {
@@ -7,6 +7,12 @@ const FormPeliculas = () => {
     descripcion: "",
     genero: "comedia",
   });
+
+  const [peliculas,setPeliculas] = useState([]);
+  useEffect(() => {
+    const storedPeliculas = JSON.parse(localStorage.getItem("peliculas")) || [];
+    setPeliculas(storedPeliculas);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
