@@ -5,8 +5,8 @@ import { Container } from "react-bootstrap";
 
 function App() {
   return <>
-  <section className="text-center mt-4">
-  <h1>Formulario de Peliculas</h1>
+  <section className=" text-center mt-4">
+  <h1 className="bg-dark text-light">Formulario de Peliculas</h1>
   </section>
   <Container className="mt-4">
   <FormPeliculas></FormPeliculas>
